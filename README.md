@@ -24,4 +24,7 @@
     数据库表DDL sql: 参考ddl.sql
     新增数据库连接池pom坐标
     修改配置文件
+    
+7、测试数据库连接是否成功，编写test类进行数据库连接测试（test中DruidLinkTest）
+注意：测试数据库连接是不能添加druid
 

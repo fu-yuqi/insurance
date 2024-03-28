@@ -12,13 +12,13 @@
     <artifactId>insurance</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>insurance</name>
-    <description>Demo project for Spring Boot</description>
 
     <properties>
         <java.version>8</java.version>
         <spring-boot.version>2.6.15</spring-boot.version>
         <druid.version>1.2.14</druid.version>
         <mysql.version>8.0.21</mysql.version>
+        <mybatis.version>2.2.2</mybatis.version>
     </properties>
 
     <dependencyManagement>
@@ -41,6 +41,13 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid.version}</version>
+            </dependency>
+
+            <!-- Mybatis -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
             </dependency>
 
             <!-- MySQL -->
