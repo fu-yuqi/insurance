@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.edor.mapper.FdedoritemMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.com.common.entity.first.Fdedoritem">
+        <id column="edorcode" property="edorcode" />
+        <result column="edorName" property="edorName" />
+        <result column="IsValid" property="IsValid" />
+        <result column="Operator" property="Operator" />
+        <result column="OperatorCom" property="OperatorCom" />
+        <result column="makeDate" property="makeDate" />
+        <result column="makeTime" property="makeTime" />
+        <result column="modifyDate" property="modifyDate" />
+        <result column="modifyTime" property="modifyTime" />
+    </resultMap>
+
+</mapper>

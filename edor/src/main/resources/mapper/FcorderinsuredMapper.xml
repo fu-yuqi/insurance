@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.edor.mapper.FcorderinsuredMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.com.common.entity.first.Fcorderinsured">
+        <id column="OrderItemNo" property="OrderItemNo" />
+        <result column="OrderNo" property="OrderNo" />
+        <result column="GrpOrderNo" property="GrpOrderNo" />
+        <result column="AddBatchSN" property="AddBatchSN" />
+        <result column="PersonID" property="PersonID" />
+        <result column="Name" property="Name" />
+        <result column="Sex" property="Sex" />
+        <result column="Birthday" property="Birthday" />
+        <result column="IDType" property="IDType" />
+        <result column="IDNo" property="IDNo" />
+        <result column="MobilePhone" property="MobilePhone" />
+        <result column="Phone" property="Phone" />
+        <result column="Department" property="Department" />
+        <result column="OccupationType" property="OccupationType" />
+        <result column="OccupationCode" property="OccupationCode" />
+        <result column="JoinMedProtect" property="JoinMedProtect" />
+        <result column="MedProtectType" property="MedProtectType" />
+        <result column="EMail" property="EMail" />
+        <result column="ZipCode" property="ZipCode" />
+        <result column="Address" property="Address" />
+        <result column="Operator" property="Operator" />
+        <result column="OperatorCom" property="OperatorCom" />
+        <result column="MakeDate" property="MakeDate" />
+        <result column="MakeTime" property="MakeTime" />
+        <result column="ModifyDate" property="ModifyDate" />
+        <result column="ModifyTime" property="ModifyTime" />
+    </resultMap>
+
+</mapper>

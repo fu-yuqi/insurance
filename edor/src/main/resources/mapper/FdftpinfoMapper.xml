@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.edor.mapper.FdftpinfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.com.common.entity.first.Fdftpinfo">
+        <id column="FTPInfoSN" property="FTPInfoSN" />
+        <result column="ModuleType" property="ModuleType" />
+        <result column="OperateType" property="OperateType" />
+        <result column="FTPSiteType" property="FTPSiteType" />
+        <result column="FileType" property="FileType" />
+        <result column="FTPRootPath" property="FTPRootPath" />
+        <result column="IPAddress" property="IPAddress" />
+        <result column="Port" property="Port" />
+        <result column="UserName" property="UserName" />
+        <result column="PassWord" property="PassWord" />
+        <result column="LocalFilePath" property="LocalFilePath" />
+    </resultMap>
+
+</mapper>

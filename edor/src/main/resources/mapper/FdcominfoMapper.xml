@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.edor.mapper.FdcominfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.com.common.entity.first.Fdcominfo">
+        <id column="COMCODE" property="comcode" />
+        <result column="OUTCOMCODE" property="outcomcode" />
+        <result column="NAME" property="name" />
+        <result column="SHORTNAME" property="shortname" />
+        <result column="ADDRESS" property="address" />
+        <result column="ZIPCODE" property="zipcode" />
+        <result column="PHONE" property="phone" />
+        <result column="FAX" property="fax" />
+        <result column="EMAIL" property="email" />
+        <result column="WEBADDRESS" property="webaddress" />
+        <result column="SATRAPNAME" property="satrapname" />
+        <result column="INSUMONITORCODE" property="insumonitorcode" />
+        <result column="INSUREID" property="insureid" />
+        <result column="SIGNID" property="signid" />
+        <result column="REGIONALISMCODE" property="regionalismcode" />
+        <result column="COMNATURE" property="comnature" />
+        <result column="VALIDCODE" property="validcode" />
+        <result column="SIGN" property="sign" />
+        <result column="COMCITYSIZE" property="comcitysize" />
+        <result column="SERVICENAME" property="servicename" />
+        <result column="SERVICENO" property="serviceno" />
+        <result column="SERVICEPHONE" property="servicephone" />
+        <result column="SERVICEPOSTADDRESS" property="servicepostaddress" />
+        <result column="COMGRADE" property="comgrade" />
+        <result column="COMAREATYPE" property="comareatype" />
+        <result column="UPCOMCODE" property="upcomcode" />
+        <result column="ISDIRUNDER" property="isdirunder" />
+        <result column="COMAREATYPE1" property="comareatype1" />
+    </resultMap>
+
+</mapper>

@@ -18,6 +18,18 @@
     </properties>
     <dependencies>
 
+        <!-- Lombok：通过注解简化开发 -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Mybatis Plus：简化Mybatis开发 -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

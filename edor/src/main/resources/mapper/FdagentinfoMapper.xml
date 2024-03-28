@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.edor.mapper.FdagentinfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.com.common.entity.first.Fdagentinfo">
+        <id column="AgentCode" property="AgentCode" />
+        <result column="AgentName" property="AgentName" />
+        <result column="ManageCom" property="ManageCom" />
+        <result column="AgentState" property="AgentState" />
+        <result column="AgentBranch" property="AgentBranch" />
+        <result column="AgentGroup" property="AgentGroup" />
+        <result column="AgentGrade" property="AgentGrade" />
+        <result column="EmployDate" property="EmployDate" />
+        <result column="DepartDate" property="DepartDate" />
+        <result column="DepartConfDate" property="DepartConfDate" />
+        <result column="Phone" property="Phone" />
+        <result column="Sex" property="Sex" />
+        <result column="Email" property="Email" />
+        <result column="BranchType" property="BranchType" />
+        <result column="ManageComName" property="ManageComName" />
+        <result column="Address" property="Address" />
+        <result column="ZipCode" property="ZipCode" />
+        <result column="ParentManageCom" property="ParentManageCom" />
+        <result column="MakeDate" property="MakeDate" />
+        <result column="MakeTime" property="MakeTime" />
+        <result column="ModifyDate" property="ModifyDate" />
+        <result column="ModifyTime" property="ModifyTime" />
+    </resultMap>
+
+</mapper>

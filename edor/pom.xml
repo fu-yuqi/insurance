@@ -27,6 +27,18 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- web：允许项目启动在Tomcat -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- 公共依赖 -->
+        <dependency>
+            <groupId>cn.com</groupId>
+            <artifactId>common</artifactId>
+        </dependency>
+
         <!-- Lombok：通过注解简化开发 -->
         <dependency>
             <groupId>org.projectlombok</groupId>

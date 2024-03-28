@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.edor.mapper.FcplanriskMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.com.common.entity.first.Fcplanrisk">
+        <id column="EnsureCode" property="EnsureCode" />
+        <result column="PlanCode" property="PlanCode" />
+        <result column="RiskCode" property="RiskCode" />
+        <result column="RiskName" property="RiskName" />
+        <result column="BinRiskCode" property="BinRiskCode" />
+        <result column="reinsuranceMark" property="reinsuranceMark" />
+        <result column="feeRatio" property="feeRatio" />
+        <result column="commissionOrAllowanceRatio" property="commissionOrAllowanceRatio" />
+        <result column="Operator" property="Operator" />
+        <result column="OperatorCom" property="OperatorCom" />
+        <result column="MakeDate" property="MakeDate" />
+        <result column="MakeTime" property="MakeTime" />
+        <result column="ModifyDate" property="ModifyDate" />
+        <result column="ModifyTime" property="ModifyTime" />
+    </resultMap>
+
+</mapper>

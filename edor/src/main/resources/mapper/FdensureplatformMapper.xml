@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.edor.mapper.FdensureplatformMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.com.common.entity.first.Fdensureplatform">
+        <id column="PlatFormID" property="PlatFormID" />
+        <result column="PlatFormName" property="PlatFormName" />
+        <result column="PlatFormGrpName" property="PlatFormGrpName" />
+        <result column="PlatFormType" property="PlatFormType" />
+        <result column="PlatFormUrl" property="PlatFormUrl" />
+        <result column="PlatFormState" property="PlatFormState" />
+        <result column="MakeDate" property="MakeDate" />
+        <result column="MakeTime" property="MakeTime" />
+        <result column="ModifyDate" property="ModifyDate" />
+        <result column="ModifyTime" property="ModifyTime" />
+    </resultMap>
+
+</mapper>

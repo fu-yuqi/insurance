@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.edor.mapper.FcplanhealthdesignrelaMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.com.common.entity.first.Fcplanhealthdesignrela">
+        <id column="EnsureCode" property="EnsureCode" />
+        <result column="DesignNo" property="DesignNo" />
+        <result column="DesignStatus" property="DesignStatus" />
+        <result column="returnReason" property="returnReason" />
+        <result column="Operator" property="Operator" />
+        <result column="OperatorCom" property="OperatorCom" />
+        <result column="MakeDate" property="MakeDate" />
+        <result column="MakeTime" property="MakeTime" />
+        <result column="ModifyDate" property="ModifyDate" />
+        <result column="ModifyTime" property="ModifyTime" />
+    </resultMap>
+
+</mapper>

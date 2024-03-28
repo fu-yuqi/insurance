@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.edor.mapper.FcmailinfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.com.common.entity.first.Fcmailinfo">
+        <id column="InvoiceInfoSN" property="InvoiceInfoSN" />
+        <result column="GrpNo" property="GrpNo" />
+        <result column="PersonId" property="PersonId" />
+        <result column="CustomType" property="CustomType" />
+        <result column="InvoiceType" property="InvoiceType" />
+        <result column="InvoiceAmount" property="InvoiceAmount" />
+        <result column="Receiver" property="Receiver" />
+        <result column="TelPhone" property="TelPhone" />
+        <result column="Zipcode" property="Zipcode" />
+        <result column="PayName" property="PayName" />
+        <result column="Email" property="Email" />
+        <result column="Location" property="Location" />
+        <result column="Address" property="Address" />
+        <result column="Operator" property="Operator" />
+        <result column="OperatorCom" property="OperatorCom" />
+        <result column="MakeDate" property="MakeDate" />
+        <result column="MakeTime" property="MakeTime" />
+        <result column="ModifyDate" property="ModifyDate" />
+        <result column="ModifyTime" property="ModifyTime" />
+        <result column="EnsureCode" property="EnsureCode" />
+        <result column="ApplicantName" property="ApplicantName" />
+        <result column="RegAddress" property="RegAddress" />
+        <result column="Regphone" property="Regphone" />
+        <result column="GrpBankcode" property="GrpBankcode" />
+        <result column="GrpBankaccno" property="GrpBankaccno" />
+    </resultMap>
+
+</mapper>

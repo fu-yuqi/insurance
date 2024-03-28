@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.edor.mapper.FcbusinessprodutygrpobjectMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.com.common.entity.first.Fcbusinessprodutygrpobject">
+        <id column="SerialNo" property="SerialNo" />
+        <result column="EnsureCode" property="EnsureCode" />
+        <result column="AmountGrageCode" property="AmountGrageCode" />
+        <result column="GrpNo" property="GrpNo" />
+        <result column="GradeLevelTopLimit" property="GradeLevelTopLimit" />
+        <result column="GradeLevelLowLimit" property="GradeLevelLowLimit" />
+        <result column="OccupationTypeTopLimit" property="OccupationTypeTopLimit" />
+        <result column="OccupationTypeLowLimit" property="OccupationTypeLowLimit" />
+        <result column="AgeTopLimit" property="AgeTopLimit" />
+        <result column="AgeLowLimit" property="AgeLowLimit" />
+        <result column="ComeAgeTopLimit" property="ComeAgeTopLimit" />
+        <result column="ComeAgeLowLimit" property="ComeAgeLowLimit" />
+        <result column="Sex" property="Sex" />
+        <result column="Retirement" property="Retirement" />
+        <result column="JoinMedProtect" property="JoinMedProtect" />
+        <result column="DefaultDeductible" property="DefaultDeductible" />
+        <result column="DefaultCompensationRatio" property="DefaultCompensationRatio" />
+        <result column="IsDefaultFlag" property="IsDefaultFlag" />
+        <result column="Amnt" property="Amnt" />
+        <result column="Prem" property="Prem" />
+        <result column="InsuredType" property="InsuredType" />
+        <result column="Operator" property="Operator" />
+        <result column="OperatorCom" property="OperatorCom" />
+        <result column="MakeDate" property="MakeDate" />
+        <result column="MakeTime" property="MakeTime" />
+        <result column="ModifyDate" property="ModifyDate" />
+        <result column="ModifyTime" property="ModifyTime" />
+    </resultMap>
+
+</mapper>

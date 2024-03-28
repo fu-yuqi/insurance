@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.edor.mapper.FcperinfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.com.common.entity.first.Fcperinfo">
+        <id column="PerNo" property="PerNo" />
+        <result column="CPerNo" property="CPerNo" />
+        <result column="GrpNo" property="GrpNo" />
+        <result column="StaffNo" property="StaffNo" />
+        <result column="LevelCode" property="LevelCode" />
+        <result column="department" property="department" />
+        <result column="Name" property="Name" />
+        <result column="Sex" property="Sex" />
+        <result column="nativeplace" property="nativeplace" />
+        <result column="ServiceTerm" property="ServiceTerm" />
+        <result column="Retirement" property="Retirement" />
+        <result column="IDType" property="IDType" />
+        <result column="IDNo" property="IDNo" />
+        <result column="idTypeEndDate" property="idTypeEndDate" />
+        <result column="idTypestartDate" property="idTypestartDate" />
+        <result column="BirthDay" property="BirthDay" />
+        <result column="Phone" property="Phone" />
+        <result column="MobilePhone" property="MobilePhone" />
+        <result column="OccupationType" property="OccupationType" />
+        <result column="OccupationCode" property="OccupationCode" />
+        <result column="JoinMedProtect" property="JoinMedProtect" />
+        <result column="MedProtectType" property="MedProtectType" />
+        <result column="Email" property="Email" />
+        <result column="ZipCode" property="ZipCode" />
+        <result column="Address" property="Address" />
+        <result column="DefaultPlan" property="DefaultPlan" />
+        <result column="OpenBank" property="OpenBank" />
+        <result column="OpenAccount" property="OpenAccount" />
+        <result column="LockState" property="LockState" />
+        <result column="OperatorCom" property="OperatorCom" />
+        <result column="Operator" property="Operator" />
+        <result column="MakeDate" property="MakeDate" />
+        <result column="MakeTime" property="MakeTime" />
+        <result column="ModifyDate" property="ModifyDate" />
+        <result column="ModifyTime" property="ModifyTime" />
+    </resultMap>
+
+</mapper>

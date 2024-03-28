@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.edor.mapper.FcedoracinfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.com.common.entity.first.Fcedoracinfo">
+        <id column="EdorAppNo" property="EdorAppNo" />
+        <result column="GrpContNo" property="GrpContNo" />
+        <result column="GrpNo" property="GrpNo" />
+        <result column="GrpName" property="GrpName" />
+        <result column="Corporation" property="Corporation" />
+        <result column="GetFlag" property="GetFlag" />
+        <result column="BankCode" property="BankCode" />
+        <result column="BankAccNo" property="BankAccNo" />
+        <result column="GrpAddress" property="GrpAddress" />
+        <result column="ZipCode" property="ZipCode" />
+        <result column="Email" property="Email" />
+        <result column="MakeDate" property="MakeDate" />
+        <result column="MakeTime" property="MakeTime" />
+        <result column="ModifyDate" property="ModifyDate" />
+        <result column="ModifyTime" property="ModifyTime" />
+        <result column="asset" property="asset" />
+        <result column="idTimeEnd" property="idTimeEnd" />
+        <result column="peoples" property="peoples" />
+        <result column="comWebsite" property="comWebsite" />
+        <result column="negativeFlag" property="negativeFlag" />
+        <result column="corporationIDNo" property="corporationIDNo" />
+        <result column="iDType" property="iDType" />
+        <result column="iDValidityPeriod" property="iDValidityPeriod" />
+        <result column="socCreNum" property="socCreNum" />
+        <result column="comNo" property="comNo" />
+        <result column="taxRegNum" property="taxRegNum" />
+        <result column="busRegNum" property="busRegNum" />
+        <result column="busliceStartDate" property="busliceStartDate" />
+        <result column="busliceDate" property="busliceDate" />
+        <result column="contrShar" property="contrShar" />
+        <result column="shareholderType" property="shareholderType" />
+        <result column="shareholderIDType" property="shareholderIDType" />
+        <result column="shareholderIDNo" property="shareholderIDNo" />
+        <result column="shareholderIDExpDate" property="shareholderIDExpDate" />
+        <result column="shareholderSocCreNum" property="shareholderSocCreNum" />
+        <result column="shareholderComNo" property="shareholderComNo" />
+        <result column="shareholderTaxRegNum" property="shareholderTaxRegNum" />
+        <result column="shareholderBusRegNum" property="shareholderBusRegNum" />
+        <result column="accName" property="accName" />
+        <result column="insContIDType1" property="insContIDType1" />
+        <result column="insContIDNo1" property="insContIDNo1" />
+        <result column="insContIDPeriodOfValidityType1" property="insContIDPeriodOfValidityType1" />
+        <result column="insContIDPeriodOfValidity1" property="insContIDPeriodOfValidity1" />
+        <result column="interFaceType1" property="interFaceType1" />
+        <result column="phone1" property="phone1" />
+        <result column="phone" property="phone" />
+        <result column="fax" property="fax" />
+        <result column="foundDate" property="foundDate" />
+        <result column="appntNativePlace" property="appntNativePlace" />
+        <result column="imageid" property="imageid" />
+        <result column="mobilePhone1" property="mobilePhone1" />
+        <result column="nzProportion" property="nzProportion" />
+        <result column="OrgCertificate_Number" property="orgcertificateNumber" />
+        <result column="OrgCertificate_Number1" property="orgcertificateNumber1" />
+        <result column="OrgCertificate" property="OrgCertificate" />
+        <result column="OrgcertificateValidityperiod" property="OrgcertificateValidityperiod" />
+        <result column="OrgCertificate_start" property="orgcertificateStart" />
+        <result column="OrgCertificate_end" property="orgcertificateEnd" />
+        <result column="IsJoinSocialPooling" property="IsJoinSocialPooling" />
+        <result column="CompanySeal" property="CompanySeal" />
+    </resultMap>
+
+</mapper>

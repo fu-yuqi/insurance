@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.edor.mapper.FcedoraddinsuredMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.com.common.entity.first.Fcedoraddinsured">
+        <id column="PlusInsuredSN" property="PlusInsuredSN" />
+        <result column="GrpContNo" property="GrpContNo" />
+        <result column="EdorAppNo" property="EdorAppNo" />
+        <result column="GrpNo" property="GrpNo" />
+        <result column="Batch" property="Batch" />
+        <result column="ContNo" property="ContNo" />
+        <result column="Name" property="Name" />
+        <result column="nativeplace" property="nativeplace" />
+        <result column="Sex" property="Sex" />
+        <result column="IdNo" property="IdNo" />
+        <result column="IdType" property="IdType" />
+        <result column="idTypeEndDate" property="idTypeEndDate" />
+        <result column="idTypestartDate" property="idTypestartDate" />
+        <result column="Birthday" property="Birthday" />
+        <result column="TotalPrem" property="TotalPrem" />
+        <result column="mobile" property="mobile" />
+        <result column="InsuredRelation" property="InsuredRelation" />
+        <result column="RelationToAppnt" property="RelationToAppnt" />
+        <result column="PlusEffectDate" property="PlusEffectDate" />
+        <result column="plancode" property="plancode" />
+        <result column="MedicareStatus" property="MedicareStatus" />
+        <result column="EdorType" property="EdorType" />
+        <result column="TrialStatus" property="TrialStatus" />
+        <result column="JobType" property="JobType" />
+        <result column="JobCode" property="JobCode" />
+        <result column="LevelCode" property="LevelCode" />
+        <result column="ServiceTerm" property="ServiceTerm" />
+        <result column="Retirement" property="Retirement" />
+        <result column="staffName" property="staffName" />
+        <result column="MainIdNo" property="MainIdNo" />
+        <result column="MainIdType" property="MainIdType" />
+        <result column="relation" property="relation" />
+        <result column="PayMethod" property="PayMethod" />
+        <result column="ComPayment" property="ComPayment" />
+        <result column="PerPayment" property="PerPayment" />
+        <result column="DebitPayBank" property="DebitPayBank" />
+        <result column="DebitPayCode" property="DebitPayCode" />
+        <result column="DebitPayName" property="DebitPayName" />
+        <result column="ReservedMobile" property="ReservedMobile" />
+        <result column="DeathBenefiName" property="DeathBenefiName" />
+        <result column="DeathBenefiRelation" property="DeathBenefiRelation" />
+        <result column="AutoInsured" property="AutoInsured" />
+        <result column="remarks" property="remarks" />
+        <result column="DeathBenefiPrem" property="DeathBenefiPrem" />
+        <result column="subsidiaryInsuredFlag" property="subsidiaryInsuredFlag" />
+        <result column="Operator" property="Operator" />
+        <result column="OperatorCom" property="OperatorCom" />
+        <result column="MakeDate" property="MakeDate" />
+        <result column="MakeTime" property="MakeTime" />
+        <result column="ModifyDate" property="ModifyDate" />
+        <result column="ModifyTime" property="ModifyTime" />
+        <result column="sorCode" property="sorCode" />
+        <result column="contactAddress" property="contactAddress" />
+    </resultMap>
+
+</mapper>

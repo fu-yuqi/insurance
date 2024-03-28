@@ -31,3 +31,7 @@
 8、新增代码生成器module -generator
     新增代码生成器的依赖，配置数据连接池
 
+9、利用代码生成器生成代码
+    生成后pojo移动到common中
+    其他的移动到edor的src和resources中
+    启动类上添加注解：@MapperScan("cn.com.edor.mapper")

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.edor.mapper.FcgrpinfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.com.common.entity.first.Fcgrpinfo">
+        <id column="GrpNo" property="GrpNo" />
+        <result column="CGrpNo" property="CGrpNo" />
+        <result column="GrpName" property="GrpName" />
+        <result column="GrpAddRess" property="GrpAddRess" />
+        <result column="ZipCode" property="ZipCode" />
+        <result column="UnifiedsociCode" property="UnifiedsociCode" />
+        <result column="GrpIdType" property="GrpIdType" />
+        <result column="GrpIdNo" property="GrpIdNo" />
+        <result column="GrpType" property="GrpType" />
+        <result column="AccName" property="AccName" />
+        <result column="grpBankCode" property="grpBankCode" />
+        <result column="grpBankAccNo" property="grpBankAccNo" />
+        <result column="Peoples" property="Peoples" />
+        <result column="CorporationMan" property="CorporationMan" />
+        <result column="telphone" property="telphone" />
+        <result column="regaddress" property="regaddress" />
+        <result column="Email" property="Email" />
+        <result column="Clientno" property="Clientno" />
+        <result column="Trade" property="Trade" />
+        <result column="grpIDImage1" property="grpIDImage1" />
+        <result column="grpIDImage2" property="grpIDImage2" />
+        <result column="LegIDImage1" property="LegIDImage1" />
+        <result column="LegIDImage2" property="LegIDImage2" />
+        <result column="Operator" property="Operator" />
+        <result column="OperatorCom" property="OperatorCom" />
+        <result column="MakeDate" property="MakeDate" />
+        <result column="MakeTime" property="MakeTime" />
+        <result column="ModifyDate" property="ModifyDate" />
+        <result column="ModifyTime" property="ModifyTime" />
+        <result column="BusinessTerm" property="BusinessTerm" />
+        <result column="BusinessTermStart" property="BusinessTermStart" />
+        <result column="OrgCertificate_Number" property="orgcertificateNumber" />
+        <result column="OrgCertificate_Number1" property="orgcertificateNumber1" />
+        <result column="OrgCertificate" property="OrgCertificate" />
+        <result column="OrgcertificateValidityperiod" property="OrgcertificateValidityperiod" />
+        <result column="Three_Certificates" property="threeCertificates" />
+        <result column="Is_Taxpayer" property="isTaxpayer" />
+        <result column="Duty_paragraph" property="dutyParagraph" />
+        <result column="Business_number" property="businessNumber" />
+        <result column="OrgCertificate_start" property="orgcertificateStart" />
+        <result column="OrgCertificate_end" property="orgcertificateEnd" />
+        <result column="province" property="province" />
+        <result column="city" property="city" />
+        <result column="area" property="area" />
+        <result column="Register_province" property="registerProvince" />
+        <result column="Register_city" property="registerCity" />
+        <result column="Register_area" property="registerArea" />
+        <result column="Salesman_name" property="salesmanName" />
+        <result column="Salesman_phone" property="salesmanPhone" />
+        <result column="Institution_type" property="institutionType" />
+        <result column="Institution_name" property="institutionName" />
+        <result column="Institution_address_inenglish" property="institutionAddressInenglish" />
+        <result column="Institution_address_chinese" property="institutionAddressChinese" />
+        <result column="Institution_people_iden" property="institutionPeopleIden" />
+        <result column="temporary_registSN" property="temporaryRegistsn" />
+        <result column="IsJoinSocialPooling" property="IsJoinSocialPooling" />
+        <result column="MainBusiness" property="MainBusiness" />
+        <result column="Comarea" property="Comarea" />
+        <result column="shareholdersName" property="shareholdersName" />
+        <result column="OpenBankName" property="OpenBankName" />
+        <result column="CompanySeal" property="CompanySeal" />
+    </resultMap>
+
+</mapper>

@@ -21,6 +21,7 @@
         <mybatis.version>2.2.2</mybatis.version>
         <mybatis-plus.version>3.3.2</mybatis-plus.version>
         <lombok.version>1.18.28</lombok.version>
+        <common.version>0.0.1-SNAPSHOT</common.version>
     </properties>
 
     <dependencyManagement>
@@ -36,6 +37,20 @@
                 <artifactId>spring-boot-starter-test</artifactId>
                 <scope>test</scope>
                 <version>${spring-boot.version}</version>
+            </dependency>
+
+            <!-- web：允许项目启动在Tomcat -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+
+            <!-- 公共依赖 -->
+            <dependency>
+                <groupId>cn.com</groupId>
+                <artifactId>common</artifactId>
+                <version>${common.version}</version>
             </dependency>
 
             <!-- Mybatis Plus Generator：代码生成器 -->
