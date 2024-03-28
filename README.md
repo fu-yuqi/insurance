@@ -7,3 +7,6 @@
 ![image](https://github.com/fu-yuqi/insurance/assets/73983307/c209eb7f-3c64-4f54-ab05-91d455d7e40a)
 
 2、新增契约模块module -insure (主要负责处理契约业务)
+
+3、新增保全模块module -edor (主要负责处理保全业务)
+
