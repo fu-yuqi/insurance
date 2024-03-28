@@ -35,3 +35,4 @@
     生成后pojo移动到common中
     其他的移动到edor的src和resources中
     启动类上添加注解：@MapperScan("cn.com.edor.mapper")
+    上传lombok插件
