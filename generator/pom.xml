@@ -9,22 +9,23 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>cn.com</groupId>
-    <artifactId>edor</artifactId>
+    <artifactId>generator</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>edor</name>
+    <name>generator</name>
     <properties>
         <java.version>8</java.version>
     </properties>
     <dependencies>
+        <!-- Mybatis Plus Generator：代码生成器 -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
         </dependency>
 
+        <!-- SpringBoot FreeMarker：用于代码生成器 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
         </dependency>
 
         <!-- Lombok：通过注解简化开发 -->
@@ -65,6 +66,11 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <image>
+                        <builder>paketobuildpacks/builder-jammy-base:latest</builder>
+                    </image>
+                </configuration>
             </plugin>
         </plugins>
     </build>

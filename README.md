@@ -28,3 +28,6 @@
 7、测试数据库连接是否成功，编写test类进行数据库连接测试（test中DruidLinkTest）
 注意：测试数据库连接是不能添加druid
 
+8、新增代码生成器module -generator
+    新增代码生成器的依赖，配置数据连接池
+

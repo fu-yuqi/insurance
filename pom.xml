@@ -19,6 +19,8 @@
         <druid.version>1.2.14</druid.version>
         <mysql.version>8.0.21</mysql.version>
         <mybatis.version>2.2.2</mybatis.version>
+        <mybatis-plus.version>3.3.2</mybatis-plus.version>
+        <lombok.version>1.18.28</lombok.version>
     </properties>
 
     <dependencyManagement>
@@ -34,6 +36,42 @@
                 <artifactId>spring-boot-starter-test</artifactId>
                 <scope>test</scope>
                 <version>${spring-boot.version}</version>
+            </dependency>
+
+            <!-- Mybatis Plus Generator：代码生成器 -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <!-- Mybatis Plus扩展：用于代码生成器 -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-extension</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <!-- SpringBoot FreeMarker：用于代码生成器 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-freemarker</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+
+            <!-- Lombok：通过注解简化开发 -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- Mybatis Plus：简化Mybatis开发 -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
             </dependency>
 
             <!-- 数据库连接池配置 -->
