@@ -19,4 +19,9 @@
     model: request或response实体类
     utils: 辅助工具类包
     
+6、连接数据库
+    数据库名称：insurance
+    数据库表DDL sql: 参考ddl.sql
+    新增数据库连接池pom坐标
+    修改配置文件
 
