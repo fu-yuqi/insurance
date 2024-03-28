@@ -10,3 +10,13 @@
 
 3、新增保全模块module -edor (主要负责处理保全业务)
 
+4、修改配置文件（yml）
+
+5、创建公共类模块module -common
+    contast: Enum类公共包
+    entity.first: 实体类公共包（pojo）
+    exception: 异常公共包
+    model: request或response实体类
+    utils: 辅助工具类包
+    
+
