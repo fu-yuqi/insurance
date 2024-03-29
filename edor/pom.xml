@@ -27,6 +27,12 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Spring Validation校验数据有效性 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
         <!-- swagger依赖 -->
         <dependency>
             <groupId>io.springfox</groupId>

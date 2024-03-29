@@ -2,6 +2,9 @@ package cn.com.common.model.request.user;
 
 import lombok.Data;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
 /**
  *
  */
@@ -11,11 +14,15 @@ public class UserDo {
     /**
      * 登录名
      */
+    @NotNull(message = "登录名不能为空")
+    @NotEmpty(message = "登录名不能为空")
     private String loginName;
 
     /**
      * 姓名
      */
+    @NotNull(message = "用户名不能为空")
+    @NotEmpty(message = "用户名不能为空")
     private String userName;
 
     /**
@@ -26,6 +33,8 @@ public class UserDo {
     /**
      * 密码
      */
+    @NotNull(message = "登录密码不能为空")
+    @NotEmpty(message = "登录密码不能为空")
     private String passWord;
 
     /**

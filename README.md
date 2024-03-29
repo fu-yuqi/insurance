@@ -49,4 +49,6 @@
     集成swagger测试接口
 
 13、处理edor全局异常类监听：所有抛出的异常均会被MyEexceptionHandler拦截
+
+14、通过Spring Validation检查数据的有效性
     
