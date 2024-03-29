@@ -64,7 +64,7 @@ public class Fcappntimpartinfo implements Serializable {
      * 生成日期
      */
     @TableField("MakeDate")
-    private LocalDate MakeDate;
+    private String MakeDate;
 
     /**
      * 生成时间
@@ -76,7 +76,7 @@ public class Fcappntimpartinfo implements Serializable {
      * 修改日期
      */
     @TableField("ModifyDate")
-    private LocalDate ModifyDate;
+    private String ModifyDate;
 
     /**
      * 修改时间
