@@ -1,6 +1,7 @@
 package cn.com.edor.service.impl;
 
 import cn.com.common.entity.first.FuUser;
+import cn.com.common.exception.BusinessException;
 import cn.com.common.model.request.user.UserDo;
 import cn.com.edor.mapper.FuUserMapper;
 import cn.com.edor.service.IFuUserService;
@@ -34,6 +35,7 @@ public class FuUserServiceImpl extends ServiceImpl<FuUserMapper, FuUser> impleme
         fuUser.setMaketime("14:44:19");
         fuUser.setModifydate("2024-03-29");
         fuUser.setModifytime("14:44:19");
+//        throw new BusinessException("新增用户失败");
         fuUserMapper.insert(fuUser);
         return "用户新增成功！";
     }

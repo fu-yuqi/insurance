@@ -56,6 +56,18 @@ public class ResponseResult<E> implements Serializable {
          * 错误：用户名已经被注册
          */
         Integer ERR_CODE = 400;
+        /**
+         * 错误：用户没有权限
+         */
+        Integer ERR_SHIRO = 401;
+        /**
+         * 错误：系统错误
+         */
+        Integer ERR_SYSTEM = 500;
+        /**
+         * 错误：未知错误
+         */
+        Integer ERR_UNKNOWN = 900;
     }
 
 }
