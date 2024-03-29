@@ -13,6 +13,8 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>insurance</name>
 
+    <packaging>pom</packaging>
+
     <properties>
         <java.version>8</java.version>
         <spring-boot.version>2.6.15</spring-boot.version>
@@ -22,6 +24,7 @@
         <mybatis-plus.version>3.3.2</mybatis-plus.version>
         <lombok.version>1.18.28</lombok.version>
         <common.version>0.0.1-SNAPSHOT</common.version>
+        <swagger.version>3.0.0</swagger.version>
     </properties>
 
     <dependencyManagement>
@@ -37,6 +40,23 @@
                 <artifactId>spring-boot-starter-test</artifactId>
                 <scope>test</scope>
                 <version>${spring-boot.version}</version>
+            </dependency>
+
+            <!-- swagger依赖 -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-boot-starter</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.version}</version>
             </dependency>
 
             <!-- web：允许项目启动在Tomcat -->

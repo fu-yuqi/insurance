@@ -25,7 +25,7 @@ public class CodeGenerator {
     // 【注意】需要改成自己的MySQL/MariaDB的密码
     public static String password = "root";
     // 【请确认】父级别包名称
-    public static String parentPackage = "cn.com.insurance";
+    public static String parentPackage = "cn.com";
     // 【请确认】模块名称，用于组成包名，将和上面的parentPackage组成完整的包名
     public static String modelName = "edor";
     // 【请确认】数据库连接参数，需要注意数据库名称是否需要修改

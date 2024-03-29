@@ -1,6 +1,5 @@
 package cn.com.edor.fcappntimper;
 
-import cn.com.common.entity.first.Fcappntimpartinfo;
 import cn.com.edor.mapper.FcappntimpartinfoMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
