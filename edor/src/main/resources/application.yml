@@ -1,10 +1,23 @@
-spring.application.name: edor
+spring.application.name: insurance-edor
 
 server:
   port: 8080
 
-#数据连接池配置
+#数据库连接池配置
 spring:
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      config:
+        group: insurance_group
+        namespace: insurance
+      core:
+        member:
+          lookup:
+            type: file
+  # SpringCloud 2021版本之后，需要用以下方式导入nacos的配置文件
+  config:
+    import: nacos:bootstrap.yml
   datasource:
     url: jdbc:mysql://localhost:3306/insurance_dev?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
     username: root
@@ -20,6 +33,7 @@ spring:
       test-while-idle: true
       test-on-borrow: false
       test-on-return: false
+
 
 #mybatis文件访问路径
 mybatis:

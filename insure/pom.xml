@@ -26,6 +26,17 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- nacos -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <version>${alibaba-cloud.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <version>${alibaba-cloud.version}</version>
+        </dependency>
 
         <!-- Lombok：通过注解简化开发 -->
         <dependency>

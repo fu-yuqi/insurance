@@ -25,6 +25,8 @@
         <lombok.version>1.18.28</lombok.version>
         <common.version>0.0.1-SNAPSHOT</common.version>
         <swagger.version>3.0.0</swagger.version>
+        <alibaba-cloud.version>2021.0.4.0</alibaba-cloud.version>
+        <spring-cloud.version>2021.0.9</spring-cloud.version>
     </properties>
 
     <dependencyManagement>
@@ -40,6 +42,27 @@
                 <artifactId>spring-boot-starter-test</artifactId>
                 <scope>test</scope>
                 <version>${spring-boot.version}</version>
+            </dependency>
+
+            <!-- Spring Cloud 家族 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- nacos -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+                <version>${alibaba-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+                <version>${alibaba-cloud.version}</version>
             </dependency>
 
             <!-- Spring Validation校验数据有效性 -->

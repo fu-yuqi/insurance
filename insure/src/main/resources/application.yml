@@ -1,6 +1,9 @@
-spring.application.name: insure
+spring.application.name: insurance-insure
 
-# 连接数据库的配置信息
+server:
+  port: 8081
+
+#鏁版嵁搴撹繛鎺ユ睜閰嶇疆
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/insurance_dev?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
@@ -17,5 +20,3 @@ spring:
 #      test-while-idle: true
 #      test-on-borrow: false
 #      test-on-return: false
-server:
-  port: 8081

@@ -1,5 +1,6 @@
 package cn.com.edor.config;
 
+import com.alibaba.nacos.api.config.annotation.NacosValue;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,7 +23,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class SwaggerConfig {
 
     //从配置文件中决定是否可用
-    @Value("${swagger2.enable}")
+//    @Value("${swagger2.enable}")
+    @NacosValue("${swagger2.enable}")
     boolean enable ;
 
     /**

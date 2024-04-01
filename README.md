@@ -52,3 +52,8 @@
 
 14、通过Spring Validation检查数据的有效性
     
+15、使用nacos实现服务注册，并通过nacos的配置文件启动项目(需要nacos2.0.4版本)
+    1、nacos启动：进入bin文件夹,cmd 执行脚本startup.cmd -m standalone    登录地址：localhost:8848/nacos/index.html#/
+    2、配置nacos相关配置，导入nacos依赖
+    3、新建bootstrap.yml
+    4、创建nacos配置类，以便后续动态获取配置文件信息
