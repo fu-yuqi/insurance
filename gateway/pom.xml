@@ -25,6 +25,12 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- spring security 安全框架 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
         <!-- 引入网关gateway依赖 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
