@@ -27,6 +27,12 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- 引入bootstrap依赖，否则nacos不生效 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
+
         <!-- nacos -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>

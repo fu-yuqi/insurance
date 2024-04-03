@@ -57,3 +57,4 @@
     2、配置nacos相关配置，导入nacos依赖
     3、新建bootstrap.yml
     4、创建nacos配置类，以便后续动态获取配置文件信息
+    5、从nacos上拉去配置启动项目
