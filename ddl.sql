@@ -1775,25 +1775,25 @@ CREATE TABLE `fs_log` (
 -- flexibleint.fs_menu definition
 
 CREATE TABLE `fs_menu` (
-  `node_code` varchar(10) NOT NULL,
-  `parent_nodecode` varchar(10) DEFAULT NULL,
-  `node_level` int(11) DEFAULT NULL,
-  `node_name` varchar(60) DEFAULT NULL,
-  `child_flag` int(11) DEFAULT NULL,
-  `run_script` varchar(200) DEFAULT NULL,
-  `node_imgurl` varchar(200) DEFAULT NULL,
-  `node_desc` varchar(200) DEFAULT NULL,
-  `node_order` int(11) DEFAULT NULL,
-  `operator` varchar(10) NOT NULL DEFAULT '' COMMENT '存当前登录用户ID',
-  `operatorcom` varchar(20) NOT NULL DEFAULT '' COMMENT '存当前操作用户的管理机构',
-  `makedate` date NOT NULL COMMENT '创建日期',
-  `maketime` char(8) NOT NULL COMMENT '创建时间',
-  `modifydate` date NOT NULL COMMENT '修改日期',
-  `modifytime` char(8) NOT NULL COMMENT '修改时间',
-  `menu_sys` varchar(2) NOT NULL COMMENT '菜单系统标识  0弹福管理端 1等宝',
-  `menu_type` varchar(2) NOT NULL COMMENT '菜单类型 0目录 1菜单  2按钮',
-  `auth_sign` varchar(200) DEFAULT '' COMMENT '权限标识',
-  PRIMARY KEY (`node_code`)
+`node_code` varchar(10) NOT NULL,
+`parent_nodecode` varchar(10) DEFAULT NULL,
+`node_level` int(11) DEFAULT NULL,
+`node_name` varchar(60) DEFAULT NULL,
+`child_flag` int(11) DEFAULT NULL,
+`run_script` varchar(200) DEFAULT NULL,
+`node_imgurl` varchar(200) DEFAULT NULL,
+`node_desc` varchar(200) DEFAULT NULL,
+`node_order` int(11) DEFAULT NULL,
+`auth_sign` varchar(200) DEFAULT '' COMMENT '权限标识',
+`menu_type` varchar(2) NOT NULL COMMENT '菜单类型 0目录 1菜单  2按钮',
+`menu_sys` varchar(2) NOT NULL COMMENT '菜单系统标识  0弹福管理端 1等宝',
+`operator` varchar(10) NOT NULL DEFAULT '' COMMENT '存当前登录用户ID',
+`operatorcom` varchar(20) NOT NULL DEFAULT '' COMMENT '存当前操作用户的管理机构',
+`makedate` date NOT NULL COMMENT '创建日期',
+`maketime` char(8) NOT NULL COMMENT '创建时间',
+`modifydate` date NOT NULL COMMENT '修改日期',
+`modifytime` char(8) NOT NULL COMMENT '修改时间',
+PRIMARY KEY (`node_code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT=' 存放所有的菜单节点信息';
 
 

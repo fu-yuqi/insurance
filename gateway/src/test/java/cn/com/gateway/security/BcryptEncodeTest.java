@@ -12,10 +12,8 @@ public class BcryptEncodeTest {
     void bcryptEncode() {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         String rawPassword = "1234";
-        for (int i = 0; i < 50; i++) {
-            String encodePassword = passwordEncoder.encode(rawPassword);
-            System.err.println("encodePassword=" + encodePassword);
-        }
+        String encodePassword = passwordEncoder.encode(rawPassword);
+        System.out.println("encodePassword=" + encodePassword);
     }
     // 测试验证密码
     @Test

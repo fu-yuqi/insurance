@@ -20,6 +20,9 @@ spring:
       test-while-idle: true
       test-on-borrow: false
       test-on-return: false
+  main:
+    web-application-type: reactive
+    allow-bean-definition-overriding: true
   cloud:
     gateway:
       discovery:
@@ -49,17 +52,17 @@ spring:
           uri: lb://insurance-insure #匹配后提供服务的路由地址
           predicates:
             - Path=/**         # 断言，路径相匹配的进行路由
-#            - After=2020-11-20T17:07:24.352+08:00[Asia/Shanghai]
+            # - After=2020-11-20T17:07:24.352+08:00[Asia/Shanghai]
             #            - Cookie=username,longy
             # - Before=2020-11-20T17:11:24.352+08:00[Asia/Shanghai]
             # - Between
-#            - Host=**.foo.org
-#            - Path=/headers
-#            - Method=GET
-#            - Header=X-Request-Id, \d+
-#            - Query=foo, ba.
-#            - Query=baz
-#            - Cookie=chocolate, ch.p
+            # - Host=**.foo.org
+            # - Path=/headers
+            # - Method=GET
+            # - Header=X-Request-Id, \d+
+            # - Query=foo, ba.
+            # - Query=baz
+            # - Cookie=chocolate, ch.p
 
 #mybatis文件访问路径
 mybatis:

@@ -68,3 +68,10 @@
     2、新建测试类测试安全框架
 
 18、配置网关转发规则
+
+19、通过security进行权限验证
+    在common中创建登录类集成security中的user类
+    在gateway中生成fu_user、fu_role、fu_user_role_rela的mapper、实体类等文件
+    修改fs_menu表结构（ddl.sql修改）
+    因为WebSecurityConfig类需要用到javax中的filter才能启动，所以pom文件中引入javax依赖，否则项目不能启动
+    并且因为bean重复，所以修改application文件，让后注册的bean覆盖之前的bean

@@ -17,6 +17,12 @@
     </properties>
     <dependencies>
 
+        <!-- spring security 安全框架 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
         <!-- Spring Validation校验数据有效性 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
