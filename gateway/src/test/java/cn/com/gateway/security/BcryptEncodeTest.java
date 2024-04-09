@@ -21,7 +21,7 @@ public class BcryptEncodeTest {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         String rawPassword = "1234";
         String encodePassword =
-                "$2a$10$.eQiB/9PjQOQLfKJOG4vCekDoObxETfBir8hoRQpOA5/ggaAPSAxm";
+                "$2a$10$ATgt/9TWmM4zLMI1T5vd1eeG3u8PX7bS48Am08uLLTufkNxapkgRO";
         boolean result = passwordEncoder.matches(rawPassword, encodePassword);
         System.err.println("原文=" + rawPassword);
         System.err.println("密码=" + encodePassword);
