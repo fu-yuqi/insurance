@@ -25,7 +25,7 @@ public class SwaggerConfig {
 
     /**
      * Api显示的详细配置信息
-     * 访问http://127.0.0.1:8080/swagger-ui/index.html可以看到API文档
+     * 访问http://127.0.0.1:80/swagger-ui/index.html可以看到API文档
      * @return
      */
     private ApiInfo apiInfo() {

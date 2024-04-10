@@ -78,3 +78,5 @@
     创建测试controller，修改WebSecurityConfig类
     生成权限相关数据，测试security登录功能及权限验证功能
     #暂时无法登录，待解决
+
+20、先取消security，最后功能实现后再集成该功能
