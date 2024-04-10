@@ -4,6 +4,7 @@ import cn.com.common.entity.first.FuUser;
 import cn.com.gateway.mapper.FuUserMapper;
 import cn.com.gateway.service.IFuUserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -17,4 +18,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class FuUserServiceImpl extends ServiceImpl<FuUserMapper, FuUser> implements IFuUserService {
 
+    @Autowired
+    FuUserMapper fuUserMapper;
+
+    @Override
+    public FuUser getUserInfo(String username) {
+        return fuUserMapper.findByUsername(username);
+    }
 }

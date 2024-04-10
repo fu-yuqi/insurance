@@ -75,6 +75,6 @@
     修改fs_menu表结构（ddl.sql修改）
     因为WebSecurityConfig类需要用到javax中的filter才能启动，所以pom文件中引入javax依赖，否则项目不能启动
     并且因为bean重复，所以修改application文件，让后注册的bean覆盖之前的bean
-
     创建测试controller，修改WebSecurityConfig类
-    
+    生成权限相关数据，测试security登录功能及权限验证功能
+    #暂时无法登录，待解决

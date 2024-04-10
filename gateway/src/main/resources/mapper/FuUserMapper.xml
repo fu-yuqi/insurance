@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.com.edor.mapper.FuUserMapper">
+<mapper namespace="cn.com.gateway.mapper.FuUserMapper">
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="cn.com.common.entity.first.FuUser">
@@ -33,5 +33,16 @@
         <result column="modifydate" property="modifydate" />
         <result column="modifytime" property="modifytime" />
     </resultMap>
+
+    <sql id="Base_Column_List">
+        id, login_name, user_name, nick_name, pass_word, percustomer_id, is_lock, is_vip, login_fail_time, state, user_source,
+          email, mobile_phone, is_initpwd, lockdate, locktime, agentcode, managecom, province, city, remark, register_source,
+          operator, operatorcom, makedate, maketime, modifydate, modifytime
+    </sql>
+
+
+    <select id="findByUsername" resultMap="BaseResultMap">
+        SELECT <include refid="Base_Column_List" /> FROM user WHERE username=#{userName}
+    </select>
 
 </mapper>
