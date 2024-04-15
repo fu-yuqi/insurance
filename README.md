@@ -80,3 +80,5 @@
     #暂时无法登录，待解决
 
 20、先取消security，最后功能实现后再集成该功能
+
+21、解决gateway和springboot-starter-web依赖冲突问题
