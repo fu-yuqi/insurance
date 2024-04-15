@@ -44,6 +44,12 @@
 <!--            <scope>provided</scope>-->
 <!--        </dependency>-->
 
+        <!-- 引入fastjson依赖 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+
         <!-- 引入网关gateway依赖 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

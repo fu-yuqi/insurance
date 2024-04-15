@@ -82,3 +82,5 @@
 20、先取消security，最后功能实现后再集成该功能
 
 21、解决gateway和springboot-starter-web依赖冲突问题
+
+22、新增过滤器，过滤静态变量等路径，可以不走权限认证，新增跨域设置，尚未解决swaager-ui不能访问的问题

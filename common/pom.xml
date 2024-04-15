@@ -23,6 +23,13 @@
 <!--            <artifactId>spring-boot-starter-security</artifactId>-->
 <!--        </dependency>-->
 
+        <!-- web：允许项目启动在Tomcat -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+
         <!-- Spring Validation校验数据有效性 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
