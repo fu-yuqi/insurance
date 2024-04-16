@@ -84,3 +84,5 @@
 21、解决gateway和springboot-starter-web依赖冲突问题
 
 22、新增过滤器，过滤静态变量等路径，可以不走权限认证，新增跨域设置，尚未解决swaager-ui不能访问的问题
+
+23、gateway引入Redis 实现简单的对redis的操作
