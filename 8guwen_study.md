@@ -164,3 +164,30 @@ Redis有三种主要的集群模式，用于在分布式环境中实现高可用
 Redis中的ZSet在实现中，有多种结构，大类的话有两种，分别是ziplist(压缩列表)和skiplist(跳跃表)，但是这只是以前，在Redis 5.0中新增了一个listpack（紧凑列表）的数据结构，这种数据结构就是为了替代ziplist的，而在之后Redis 7.0的发布中，在Zset的实现中，已经彻底不在使用zipList了。
 zipList（ListPack）转换为SkipList条件：总的来说就是，当元素数量少于128，每个元素的长度都小于64字节的时候，使用ZipList（ListPack），否则，使用SkipList！
 ```
+
+
+## 二、MySql
+
+### 1.定位慢查询
+```
+1、介绍当时生产出现的问题
+2、使用运维工具检测哪个接口耗时比较长，最终定位到sql
+3、在mysql中开启了慢日志查询。设置阈值为2s，一旦sql执行超过2s就会被记录
+```
+
+### 2.分析慢sql
+```
+sql执行计划：找到慢的原因
+采用explain或desc命令获取mysql如何执行select语句的信息
+possible_key:sql可能使用到的索引
+key:sql命中的索引
+key_len:使用的索引占用的大小
+Extra:额外的优化建议  关键看是否需要回表查询数据
+type:sql的链接类型，性能由好到差为null system const eq_ref ref range index all
+如果是index和all需要进行sql优化了
+```
+![img_4.png](img_4.png)
+
+### 3.索引概念及底层数据结构
+![img_5.png](img_5.png)
+![img_6.png](img_6.png)
