@@ -317,3 +317,37 @@ binlog主要用来对数据库进行数据备份、崩溃恢复和数据复制�
 全同步复制:全同步复制的这个方式中，当主库执行完一个事务之后，他会等待所有的从库完成数据复制之后，才会给客户端反馈。
 半同步复制:半同步复制是介于全同步复制和异步复制之间的一种方案。他再执行完一个事务之后，也不会立刻给客户端反馈，但是也不会等所有从库都完成事务，而是等其中一个从库完成接收到事件之后，再反馈给客户端。
 ```
+
+## 三、框架
+### 1.事务失效的场景
+```
+1、异常捕获处理
+解决办法：在catch中抛出异常，事务可以正常执行
+2、抛出检查异常
+解决办法：@Transactional(rollbackFor = Exception.class)
+3、非public方法
+```
+
+### 2.spring的bean的生命周期
+```
+BeanDefintion
+spring容器在实例化时，会将xml配置的<bean>的信息封装成一个BeanDefintion对象，spring根据BeanDefintion来创建Bean对象，里面有很多的属性来描述Bean信息
+1、根据BeanDefintion实例化Bean对象
+1步属于Bean创建
+2、依赖注入（如@Autowired、@Value属性）
+3、Aware接口（BeanNameAware、BeanFactoryAware、ApplicationContextAware）
+4、BeanPostProcessor#befor（后置处理器，增强Bean的功能，Bean的初始化方法前调用）
+5、初始化方法（InitializingBean，自定义init方法）
+6、BeanPostProcessor#after（后置处理器，增强Bean的功能，Bean的初始化方法后调用）
+2-6步属于初始化赋值操作，这个时候就可以使用Bean了
+7、销毁Bean
+```
+
+### 3.spring中的循环引用（Bean的循环依赖）
+```
+1、循环引用是指多个Bean循环引用或者引用自己
+```
+![img_9.png](img_9.png)
+
+### 4.spring中的三级缓存
+![img_8.png](img_8.png)
