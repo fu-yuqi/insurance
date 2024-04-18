@@ -326,6 +326,9 @@ binlog主要用来对数据库进行数据备份、崩溃恢复和数据复制�
 2、抛出检查异常
 解决办法：@Transactional(rollbackFor = Exception.class)
 3、非public方法
+4、同一个类中调用自己的方法（无法实现代理）
+5、final、static方法
+6、事务中使用了多线程（基于ThreadLocal实现事务处理机制，新线程的操作不会被包含在原有的事务中）
 ```
 
 ### 2.spring的bean的生命周期
@@ -350,4 +353,73 @@ spring容器在实例化时，会将xml配置的<bean>的信息封装成一个Be
 ![img_9.png](img_9.png)
 
 ### 4.spring中的三级缓存
+```
+singletonObjects是一级缓存，存储的是完整创建好的单例bean对象。
+earlySingletonObjects是二级缓存，存储的是尚未完全创建好的单例bean对象。
+singletonFactories是三级缓存，存储的是单例bean的创建工厂。
+```
 ![img_8.png](img_8.png)
+
+### 5.BeanFactory和Factory的关系
+```
+相同点：
+1、两个都是接口
+2、都是在org.springframework.beans.factory包下面
+不同点：
+1、BeanFactory是springIOC容器的一部分，负责管理Bean的依赖注入和生命周期
+2、FactoryBean通常用于创建很复杂的对象，比如需要通过某种特定的创建过程才能得到的对象。例如，创建与JNDI资源的连接或与代理对象的创建。就如我们的Dubbo中的ReferenceBean。
+```
+
+### 6.springMVC的执行流程
+![img_10.png](img_10.png)
+
+### 7.@SpringBootApplication
+```
+它主要包含@SpringBootConfiguration、@EnableAutoConfiguration等几个注解。也就是说可以直接在启动类中使用这些注解来代替@SpringBootApplication注解。 
+关于Spring Boot中的Spring自动化配置主要是@EnableAutoConfiguration的功劳。该注解可以让Spring Boot根据类路径中的jar包依赖为当前项目进行自动配置。
+@EnableAutoConfiguration中引入了一个@Import注解，注解中又引入了@EnableAutoConfigurationImportSelector注解，可以读取spring.factories中的key为
+org.springframework.boot.autoconfigure.EnableAutoConfiguration中的值
+@EnableAutoConfiguration中配置了多个类，每个Configuration都定义了Bean的实例化配置。
+Bean初始化的具体实现通过@ConditionalOnProperty和@ConditionalOnMissingBean来实现。只有满足这种条件的时候，对应的bean才会被创建。
+这样做的好处是什么？这样可以保证某些bean在没满足特定条件的情况下就可以不必初始化，避免在bean初始化过程中由于条件不足，导致应用启动失败。
+```
+
+### 8.springboot的启动流程
+```
+1、new SpringApplication的初始化过程
+    1.添加源：将提供的源（通常是配置类）添加到应用的源列表中。
+    2.设置 Web 环境：判断应用是否应该运行在 Web 环境中，这会影响后续的 Web 相关配置。
+    3.加载初始化容器（启动核心）：从spring.factories文件中加载所有列出的ApplicationContextInitializer实现，
+        并将他们设置到SpringApplication实例中，以便在应用上下文的初始化阶段执行他们
+    4.设置监听器：加载和设置ApplicationListener实例，以便能够响应不同的事件
+    5.确定主应用类：确定主应用类，这个主应用程序类通常是包含public static void main(String[] args)方法的类，是启动这个Spring boot应用的入口
+2、SpringApplication.run的启动过程(比较主要的)
+    1.启动&停止计时器：在代码中，用到stopWatch来进行计时。所以在最开始先要启动计时，在最后要停止计时。这个计时就是最终用来统计启动过程的时长的
+    2.获取和启动监听器：这一步从spring.factories中解析初始所有的SpringApplicationRunListener 实例，并通知他们应用的启动过程已经开始。
+    3.装配环境参数：这一步主要是用来做参数绑定的，prepareEnvironment 方法会加载应用的外部配置。这包括 application.properties 或 application.yml 文件中的属性，环境变量，系统属性等。所以，我们自定义的那些参数就是在这一步被绑定的。
+    4.打印Banner：这一步的作用很简单，就是在控制台打印应用的启动横幅Banner。
+    5.创建应用上下文：到这一步就真的开始启动了，第一步就是先要创建一个Spring的上下文出来，只有有了这个上下文才能进行Bean的加载、配置等工作。
+    6.准备上下文：这一步非常关键，很多核心操作都是在这一步完成的
+    7.刷新上下文：这一步，是Spring启动的核心步骤了，这一步骤包括了实例化所有的 Bean、设置它们之间的依赖关系以及执行其他的初始化任务。
+    
+springboot整个启动流程
+```
+![img_13.png](img_13.png)
+
+### 9.Spring中@Service 、@Component、@Repository等注解区别是什么？
+```
+1、@Component：是一个通用的组件声明注解，表示该类是一个Spring组件。它可以用于任何Spring管理的组件。
+2、@Service：通常用于标记服务层的组件。虽然它本质上与@Component相同，但这个注解表示该类属于服务层，这有助于区分不同层次的组件。
+3、@Repository：用于标记数据访问层的组件，即DAO（Data Access Object）层。这个注解除了将类标识为Spring组件之外，还能让Spring为它提供一些持久化特定的功能，比如异常转换。
+4、@Controller：用于标记控制层的组件，特别是在Spring MVC中用于定义控制器类。这个注解通知Spring该类应当作为控制器处理HTTP请求。
+```
+
+### 10.spring bean的作用域
+```
+1、单例（Singleton）：默认作用域。对于每个 Spring IoC 容器，只创建一个 Bean 实例。适用于全局共享的状态。
+2、原型（Prototype）：每次请求都会创建一个新的 Bean 实例。适用于所有状态都是非共享的情况。
+3、请求（Request）：仅在 Web 应用程序中有效。每个 HTTP 请求都会创建一个新的 Bean 实例。用于请求级别的数据存储和处理。
+4、会话（Session）：仅在 Web 应用程序中有效。每个 HTTP 会话都会创建一个新的 Bean 实例。适用于会话级别的数据存储和处理。
+5、应用（Application）：仅在 Web 应用程序中有效。在 ServletContext 的生命周期内，只创建一个 Bean 实例。适用于全应用程序级别的共享数据。
+6、Websocket：仅在 Web 应用程序中有效。在 Websocket 的生命周期内，只创建一个 Bean 实例。适用于websocket级别的共享数据。
+```
