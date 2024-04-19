@@ -27,30 +27,30 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
-    public ResponseResult exceptionHandler(HttpServletRequest req, Exception e) {
+    public ResponseResult exceptionHandler(Exception e) {
         ResponseResult responseResult = null;
-        if (e instanceof BusinessException) {
-            BusinessException myexception = (BusinessException) e;
-            log.warn("\r\n异常信息:" + myexception.getMessage() + "\r\n异常数据:" +  e.getStackTrace());
+        if (e instanceof Myexception) {
+            Myexception myexception = (Myexception) e;
+            log.warn("\r\n异常信息:" + myexception.getMessage() + "\r\n异常数据:" +  e.getMessage());
             responseResult = ResponseResultUtil.responseErrors(e, RestResponseEnum.BUSINESS_ERROR.getCode());
         }else if (e instanceof BusinessException) {
-            log.warn("\r\n异常信息:" + e.getMessage() + "\r\n异常堆栈:" + e.getStackTrace());
+            log.warn("\r\n异常信息:" + e.getMessage() + "\r\n异常堆栈:" + e.getMessage());
             responseResult = ResponseResultUtil.responseErrors(e, RestResponseEnum.BUSINESS_ERROR.getCode());
         } else if (e instanceof MethodArgumentNotValidException) {
             String errorMsg = ((MethodArgumentNotValidException) e).getBindingResult().getAllErrors().stream()
                     .map(DefaultMessageSourceResolvable::getDefaultMessage).collect(Collectors.joining("，"));
-            log.warn("\r\n异常信息::" + errorMsg + "\r\n异常堆栈:" + e.getStackTrace());
+            log.warn("\r\n异常信息::" + errorMsg + "\r\n异常堆栈:" + e.getMessage());
             BusinessException businessException = new BusinessException(errorMsg);
             responseResult = ResponseResultUtil.responseErrors(businessException, RestResponseEnum.BUSINESS_ERROR.getCode());
         } else if (e instanceof MissingServletRequestParameterException) {
-            log.warn("\r\n异常信息:" + e.getMessage() + "\r\n异常堆栈:" + e.getStackTrace());
+            log.warn("\r\n异常信息:" + e.getMessage() + "\r\n异常堆栈:" + e.getMessage());
             responseResult = ResponseResultUtil.responseErrors(e, RestResponseEnum.BUSINESS_ERROR.getCode());
         } else if (e instanceof HttpMessageNotReadableException) {
             BusinessException businessException = new BusinessException("请求报文解析失败");
-            log.warn("\r\n异常信息:" + businessException.getMessage() + "\r\n异常堆栈:" + e.getStackTrace());
+            log.warn("\r\n异常信息:" + businessException.getMessage() + "\r\n异常堆栈:" + e.getMessage());
             responseResult = ResponseResultUtil.responseErrors(businessException, RestResponseEnum.BUSINESS_ERROR.getCode());
         } else {
-            log.error("\r\n信息:" + "系统发生内部异常" + "\r\n异常堆栈:" +  e.getStackTrace());
+            log.error("\r\n异常信息:" + "系统发生内部异常" + "\r\n异常堆栈:" +  e.getMessage());
             responseResult = ResponseResultUtil.responseErrors(e, RestResponseEnum.SYSTEM_ERROR.getCode());
         }
         return responseResult;

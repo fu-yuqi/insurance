@@ -37,7 +37,7 @@ public class FuUserServiceImpl extends ServiceImpl<FuUserMapper, FuUser> impleme
     @Override
     public String insertUser(UserDo userDo) {
         FuUser oldUser = fuUserMapper.findByUsername(userDo.getUserName());
-        if (ObjectUtils.isEmpty(oldUser)) {
+        if (!ObjectUtils.isEmpty(oldUser)) {
             throw new BusinessException("该账户已经存在！");
         }
         FuUser fuUser = new FuUser();
