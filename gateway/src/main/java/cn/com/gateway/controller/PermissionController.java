@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2024-04-10
  */
 @RestController
-@RequestMapping("/edor/permission")
+@RequestMapping("/gateway/permission")
 public class PermissionController {
 
 }

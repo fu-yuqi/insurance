@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2024-04-09
  */
 @RestController
-@RequestMapping("/insurance/gateway/fuRole")
+@RequestMapping("/gateway/fuRole")
 public class FuRoleController {
 
     @GetMapping("/admin_delete")

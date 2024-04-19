@@ -115,3 +115,5 @@
     sh startup.sh -m standalone
     Nacos服务停止
     sh shutdown.sh
+
+27、实现用户注册功能

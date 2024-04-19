@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2024-04-09
  */
 @RestController
-@RequestMapping("/edor/fuUserRoleRela")
+@RequestMapping("/gateway/fuUserRoleRela")
 public class FuUserRoleRelaController {
 
 }

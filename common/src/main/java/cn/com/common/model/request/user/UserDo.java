@@ -63,9 +63,9 @@ public class UserDo {
     private String state;
 
     /**
-     *  页面注册用户 直销 01
-     分公司管理员创建用户 分公司管理员 02
-     渠道人员创建用户 渠道 存对应渠道编码
+     * 页面注册用户 直销 01
+     * 分公司管理员创建用户 分公司管理员 02
+     * 渠道人员创建用户 渠道 存对应渠道编码
      */
     private String userSource;
 

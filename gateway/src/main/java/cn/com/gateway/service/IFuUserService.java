@@ -1,6 +1,7 @@
 package cn.com.gateway.service;
 
 import cn.com.common.entity.first.FuUser;
+import cn.com.common.model.request.user.UserDo;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -14,5 +15,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface IFuUserService extends IService<FuUser> {
 
     FuUser getUserInfo(String userName);
+
+    public String insertUser(UserDo userDo);
 
 }

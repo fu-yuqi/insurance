@@ -23,6 +23,13 @@
 <!--            <artifactId>spring-boot-starter-security</artifactId>-->
 <!--        </dependency>-->
 
+        <!-- 引入fastjson依赖 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+
+
         <!-- web：允许项目启动在Tomcat -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
