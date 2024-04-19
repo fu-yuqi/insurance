@@ -9,15 +9,15 @@ spring:
       # nacos用户密码
       password: nacos
       # nacos服务器地址
-      server-addr: localhost:8848
+      server-addr: http://82.156.133.176:8848
       # nacos配置中心相关
       config:
         # 开启nacos作为配置中心，默认值：true
         enabled: true
         # 作为配置中心的nacos服务器地址，默认值：${spring.cloud.nacos:server-addr}
-        server-addr: localhost:8848
+        server-addr: http://82.156.133.176:8848
         # 配置文件读取的nacos命名空间ID，默认值：public
-        namespace: cc220d81-33f8-48d6-8566-01958e868bfd
+        namespace: e21b104c-8e51-45ca-938e-0d64ea387baa
         # 配置文件在nacos命名空间中的分组，默认值：DEFAULT_GROUP
         group: INSURANCE_GROUP
         # 配置文件的文件前缀（配置文件名称），默认值：${spring.application.name}
@@ -55,6 +55,6 @@ spring:
         # 开启nacos作为服务注册中心，默认值：true
         enabled: true
         # 作为注册中心的nacos服务器地址，默认值：${spring.cloud.nacos:server-addr}
-        server-addr: localhost:8848
+        server-addr: http://82.156.133.176:8848
         # 服务注册在nacso上的命名空间ID，默认值：public
-        namespace: cc220d81-33f8-48d6-8566-01958e868bfd
+        namespace: e21b104c-8e51-45ca-938e-0d64ea387baa

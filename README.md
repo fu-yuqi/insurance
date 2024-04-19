@@ -88,3 +88,30 @@
 23、gateway引入Redis 实现简单的对redis的操作
 
 24、gateway引入Redisson 实现看门狗
+
+25、腾讯云上安装Redis 修改配置文件
+    Redis启动脚本
+    redis-cli：是redis提供的命令行客户端
+    redis-server：是redis的服务端启动脚本
+    redis-sentinel：是redis的哨兵启动脚本
+    Redis停止服务脚本
+    redis-cli -u 446212798 shutdown
+    改了配置文件后
+    # 启动
+    systemctl start redis
+    # 停止
+    systemctl stop redis
+    # 重启
+    systemctl restart redis
+    # 查看状态
+    systemctl status redis
+    #开机自启动
+    systemctl enable redis
+    #查看Redis是否启动
+    ps aux | grep redis-server
+
+26、腾讯云上安装nacos 修改配置文件 远程nacos页面#http://82.156.133.176:8848/nacos/index.html#/
+    Nacos启动命令 进入bin文件夹下
+    sh startup.sh -m standalone
+    Nacos服务停止
+    sh shutdown.sh

@@ -59,16 +59,16 @@
 <!--            </dependency>-->
 
             <!-- 引入redisson -->
-            <dependency>
-                <groupId>org.redisson</groupId>
-                <artifactId>redisson-spring-boot-starter</artifactId>
-                <version>${redisson.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-pool2</artifactId>
-                <version>${commons-pool2.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.redisson</groupId>-->
+<!--                <artifactId>redisson-spring-boot-starter</artifactId>-->
+<!--                <version>${redisson.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.apache.commons</groupId>-->
+<!--                <artifactId>commons-pool2</artifactId>-->
+<!--                <version>${commons-pool2.version}</version>-->
+<!--            </dependency>-->
 
             <!-- 引入Redis -->
             <dependency>
@@ -85,17 +85,17 @@
             </dependency>
 
             <!-- 引入网关gateway依赖 -->
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-gateway</artifactId>
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.cloud</groupId>-->
+<!--                <artifactId>spring-cloud-starter-gateway</artifactId>-->
 <!--                <exclusions>-->
 <!--                    <exclusion>-->
 <!--                        <groupId>org.springframework.boot</groupId>-->
 <!--                        <artifactId>spring-boot-starter-web</artifactId>-->
 <!--                    </exclusion>-->
 <!--                </exclusions>-->
-                <version>${gateway.version}</version>
-            </dependency>
+<!--                <version>${gateway.version}</version>-->
+<!--            </dependency>-->
 
             <!-- Spring Cloud 家族 -->
             <dependency>
@@ -153,12 +153,12 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.springframework</groupId>
-                        <artifactId>spring-webmvc</artifactId>
-                    </exclusion>
-                </exclusions>
+<!--                <exclusions>-->
+<!--                    <exclusion>-->
+<!--                        <groupId>org.springframework</groupId>-->
+<!--                        <artifactId>spring-webmvc</artifactId>-->
+<!--                    </exclusion>-->
+<!--                </exclusions>-->
                 <version>${spring-boot.version}</version>
             </dependency>
 

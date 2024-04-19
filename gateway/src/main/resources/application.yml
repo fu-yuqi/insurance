@@ -26,9 +26,9 @@ spring:
   #整合Redis  选择JRedis
   redis:
     database: 0   #数据库索引
-    host: localhost  #Redis服务器地址
+    host: 82.156.133.176  #Redis服务器地址(腾讯云服务器地址)
     port: 6379  #Redis服务器端口
-    password: '' #Redis服务器密码 默认为空
+    password: '446212798' #Redis服务器密码 默认为空
     jedis:
       pool:
         max-active: 1024  #连接池最大连接数（负值表示没有限制）

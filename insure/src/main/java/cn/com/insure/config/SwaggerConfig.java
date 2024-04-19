@@ -1,4 +1,4 @@
-package cn.com.edor.config;
+package cn.com.insure.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -49,7 +49,7 @@ public class SwaggerConfig {
                 .apiInfo(apiInfo())//api的信息
                 .select()
                 //扫描策略 这里扫描demo下的所有包的接口
-                .apis(RequestHandlerSelectors.basePackage("cn.com.edor")) //从哪个包下面开始扫描
+                .apis(RequestHandlerSelectors.basePackage("cn.com.insure")) //从哪个包下面开始扫描
                 //全路径匹配
                 .paths(PathSelectors.any())
                 .build()
