@@ -16,8 +16,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 
 @EnableSwagger2
-@EnableWebMvc
 @EnableOpenApi
+@EnableWebMvc
 @Configuration
 public class SwaggerConfig {
 

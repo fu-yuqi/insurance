@@ -34,6 +34,7 @@
         <fastjson.version>1.2.83</fastjson.version>
         <redisson.version>3.17.7</redisson.version>
         <commons-pool2.version>2.11.1</commons-pool2.version>
+        <javax.version>4.0.1</javax.version>
     </properties>
 
     <dependencyManagement>
@@ -85,17 +86,11 @@
             </dependency>
 
             <!-- 引入网关gateway依赖 -->
-<!--            <dependency>-->
-<!--                <groupId>org.springframework.cloud</groupId>-->
-<!--                <artifactId>spring-cloud-starter-gateway</artifactId>-->
-<!--                <exclusions>-->
-<!--                    <exclusion>-->
-<!--                        <groupId>org.springframework.boot</groupId>-->
-<!--                        <artifactId>spring-boot-starter-web</artifactId>-->
-<!--                    </exclusion>-->
-<!--                </exclusions>-->
-<!--                <version>${gateway.version}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-gateway</artifactId>
+                <version>${gateway.version}</version>
+            </dependency>
 
             <!-- Spring Cloud 家族 -->
             <dependency>
@@ -153,13 +148,15 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
-<!--                <exclusions>-->
-<!--                    <exclusion>-->
-<!--                        <groupId>org.springframework</groupId>-->
-<!--                        <artifactId>spring-webmvc</artifactId>-->
-<!--                    </exclusion>-->
-<!--                </exclusions>-->
                 <version>${spring-boot.version}</version>
+            </dependency>
+
+            <!-- 导入javax依赖 -->
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${javax.version}</version>
+                <scope>provided</scope>
             </dependency>
 
             <!-- 公共依赖 -->
