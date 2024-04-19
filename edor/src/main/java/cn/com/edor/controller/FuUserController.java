@@ -5,6 +5,8 @@ import cn.com.common.exception.BusinessException;
 import cn.com.common.model.request.user.UserDo;
 import cn.com.common.utils.ResponseResult;
 import cn.com.edor.service.impl.FuUserServiceImpl;
+import com.alibaba.nacos.shaded.org.checkerframework.checker.units.qual.A;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
@@ -38,6 +40,12 @@ public class FuUserController {
         }
         String result = fuUserService.insertUser(userDo);
         return ResponseResult.success(result);
+    }
+
+    @RequestMapping(value = "/testHello", method = RequestMethod.GET)
+    @ApiOperation(value = "测试接口", httpMethod = "GET", notes = "测试接口")
+    public String testHello() {
+        return "hello world";
     }
 
 }
