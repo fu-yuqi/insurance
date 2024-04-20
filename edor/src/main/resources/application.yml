@@ -20,6 +20,9 @@ spring:
       test-while-idle: true
       test-on-borrow: false
       test-on-return: false
+    sentinel:
+      transport:
+        dashboard: 82.156.133.176:8080 #远程sentinel控制
 
 
 #mybatis文件访问路径

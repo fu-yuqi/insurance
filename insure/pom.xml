@@ -6,12 +6,13 @@
         <groupId>cn.com</groupId>
         <artifactId>insurance</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>cn.com</groupId>
     <artifactId>insure</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>insure</name>
+
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
@@ -23,6 +24,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <!-- sentinel实现降级和熔断功能 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
         </dependency>
 
         <!--Open Feign依赖-->
@@ -119,15 +126,13 @@
     </dependencies>
 
     <build>
+        <finalName>${project.artifactId}</finalName>
+        <defaultGoal>compile</defaultGoal>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <image>
-                        <builder>paketobuildpacks/builder-jammy-base:latest</builder>
-                    </image>
-                </configuration>
+                <version>2.6.15</version>
             </plugin>
         </plugins>
     </build>

@@ -86,6 +86,9 @@ spring:
             # - Query=foo, ba.
             # - Query=baz
             # - Cookie=chocolate, ch.p
+    sentinel:
+      transport:
+        dashboard: 82.156.133.176:80 #远程sentinel控制
 
 #mybatis文件访问路径
 mybatis:

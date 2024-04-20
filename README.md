@@ -124,3 +124,9 @@
     后续可以加入接口请求超时时间等
 
 29、实现自定义负载均衡策略（配合@LoadBalanced实现负载均衡）
+
+30、集成Sentinel实现服务降级以及熔断（多个微服务可以共同集成在一个上）
+    腾讯云上安装Sentinel可是换界面jar包
+    启动命令：nohup java -Dserver.port=9001 -Dcsp.sentiel.dashboard.server=localhost:9001 -Dproject.name=sentinel-dashboard -jar ./sentinel-dashboard-1.8.2.jar > /app/sentinel/logs/sentinel.log 2>&1 &
+    账号密码均为：sentinel
+    登录路径：http://82.156.133.176:9001/#/login
