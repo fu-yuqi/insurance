@@ -25,6 +25,18 @@
             <scope>test</scope>
         </dependency>
 
+        <!--Open Feign依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
+        <!-- 引入loadbalancer依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+        </dependency>
+
         <!-- 引入bootstrap依赖，否则nacos不生效 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

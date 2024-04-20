@@ -117,3 +117,10 @@
     sh shutdown.sh
 
 27、实现用户注册功能
+
+28、引入openFeignAPI实现服务调用功能
+    注意：openFeign和loadBalancer要一起引入
+    配置全局日志打印，需要开启项目的日志打印级别为debug
+    后续可以加入接口请求超时时间等
+
+29、实现自定义负载均衡策略（配合@LoadBalanced实现负载均衡）

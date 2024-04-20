@@ -64,6 +64,12 @@
 <!--            <artifactId>commons-pool2</artifactId>-->
 <!--        </dependency>-->
 
+        <!--Open Feign依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
         <!-- 引入Redis -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
