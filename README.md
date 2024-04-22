@@ -131,7 +131,7 @@
     账号密码均为：sentinel
     登录路径：http://82.156.133.176:9001/#/login
 
-31、腾讯云上安装rocketMq（修改内存配置，修改小一点128M）
+31、腾讯云上安装rocketMq（修改内存配置，修改小一点32M）
     启动命令：在bin文件夹下执行nohup sh mqnamesrv & 和nohup sh mqbroker -c /app/rocketMq/rocketmq-all-5.2.0-bin-release/conf/broker.conf &
     关闭命令：在bin文件夹下执行sh mqshutdown broker和sh mqshutdown namesrv
 
@@ -141,6 +141,4 @@
     打jar包
     部署到腾讯云上,启动命令：nohup java -jar rocketmq-dashboard-1.0.1-SNAPSHOT.jar & 
     可视化界面地址：http://82.156.133.176:8888
-    
-服务内存不够，无法安装
-    
+    修改rocker内存，重新启动
