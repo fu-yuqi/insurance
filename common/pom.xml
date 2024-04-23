@@ -15,8 +15,6 @@
         <java.version>8</java.version>
     </properties>
 
-    <packaging>pom</packaging>
-
     <dependencies>
 
         <!-- spring security 安全框架 -->

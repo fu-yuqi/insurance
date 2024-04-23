@@ -141,4 +141,4 @@
     打jar包
     部署到腾讯云上,启动命令：nohup java -jar rocketmq-dashboard-1.0.1-SNAPSHOT.jar & 
     可视化界面地址：http://82.156.133.176:8888
-    修改rocker内存，重新启动
+    修改rocker内存，重新启动(因MQ启动需要内存太大，只能本地搞搞了。腾讯云上不启动MQ了)
