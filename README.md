@@ -131,6 +131,7 @@
     账号密码均为：sentinel
     登录路径：http://82.156.133.176:9001/#/login
     (腾讯云服务太小，暂时本地启动)
+    本地启动命令：java -Dserver.port=9001 -Dcsp.sentiel.dashboard.server=localhost:9001 -Dproject.name=sentinel-dashboard -jar ./sentinel-dashboard-1.8.2.jar > D:/sentinel/logs/sentinel.log 2>&1 &
 
 31、腾讯云上安装rocketMq（修改内存配置，修改小一点32M）
     启动命令：在bin文件夹下执行nohup sh mqnamesrv & 和nohup sh mqbroker -c /app/rocketMq/rocketmq-all-5.2.0-bin-release/conf/broker.conf &

@@ -41,6 +41,7 @@ spring:
       discovery:
         locator:
           enabled: true #开启从注册中心动态创建路由的功能，利用微服务名进行路由
+          lower-case-service-id: true
       globalcors:
         corsConfigurations:
           '[/**]': # 这里的'/**'表示对所有路由生效，可以根据需要调整为特定路径
@@ -87,8 +88,24 @@ spring:
             # - Query=baz
             # - Cookie=chocolate, ch.p
     sentinel:
+      eager: true #取消控制台懒加载
       transport:
-        dashboard: 82.156.133.176:80 #远程sentinel控制
+        dashboard: localhost:9001 #远程sentinel控制
+      datasource:
+        ds1:
+          nacos:
+            server-addr: http://82.156.133.176:8848
+            data-id: insurance-insure.yaml
+            group-id: INSURANCE_GROUP
+            data-type: yaml
+            rule-type: flow
+        ds2:
+          nacos:
+            server-addr: http://82.156.133.176:8848
+            data-id: insurance-edor.yaml
+            group-id: INSURANCE_GROUP
+            data-type: yaml
+            rule-type: degrade
 
 #mybatis文件访问路径
 mybatis:
@@ -102,3 +119,8 @@ swagger2:
 logging:
   level:
     cn.com.gateway: debug
+
+#启用 Feign 对 Sentinel 的支持
+feign:
+  sentinel:
+    enabled: true
