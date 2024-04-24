@@ -2,7 +2,6 @@ package cn.com.edor.service.impl;
 
 import cn.com.common.entity.first.FuUser;
 import cn.com.common.model.request.user.UserDo;
-import cn.com.common.utils.ResponseResult;
 import cn.com.edor.mapper.FuUserMapper;
 import cn.com.edor.service.IFuUserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

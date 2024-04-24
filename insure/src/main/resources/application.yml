@@ -21,8 +21,10 @@ spring:
       test-on-borrow: false
       test-on-return: false
     sentinel:
+      eager: true #取消控制台懒加载
       transport:
         dashboard: localhost:9001 #远程sentinel控制
+
 
 
 #mybatis文件访问路径

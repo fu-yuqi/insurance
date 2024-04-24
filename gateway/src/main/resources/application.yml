@@ -94,18 +94,32 @@ spring:
       datasource:
         ds1:
           nacos:
+            username: nacos
+            password: nacos
             server-addr: http://82.156.133.176:8848
-            data-id: insurance-insure.yaml
-            group-id: INSURANCE_GROUP
-            data-type: yaml
+            data-id: gateway-sentinel
+            group-id: SENTINEL_GROUP
+            data-type: json
             rule-type: flow
         ds2:
           nacos:
+            username: nacos
+            password: nacos
             server-addr: http://82.156.133.176:8848
-            data-id: insurance-edor.yaml
-            group-id: INSURANCE_GROUP
-            data-type: yaml
+            data-id: edor-sentinel
+            group-id: SENTINEL_GROUP
+            data-type: json
             rule-type: degrade
+        ds3:
+          nacos:
+            username: nacos
+            password: nacos
+            server-addr: http://82.156.133.176:8848
+            data-id: insurance-sentinel
+            group-id: SENTINEL_GROUP
+            data-type: json
+            rule-type: degrade
+
 
 #mybatis文件访问路径
 mybatis:
