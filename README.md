@@ -149,3 +149,7 @@
     安装VMware软件
     安装Linux镜像（ip:192.168.200.130 账号/密码：itcast/itcast）
     docker命令见docker.md
+
+34、虚拟机安装mysql
+    地址：192.168.200.130:3306
+    账号/密码：root/123456
