@@ -132,6 +132,7 @@
     登录路径：http://82.156.133.176:9001/#/login
     (腾讯云服务太小，暂时本地启动)
     本地启动命令：java -Dserver.port=9001 -Dcsp.sentiel.dashboard.server=localhost:9001 -Dproject.name=sentinel-dashboard -jar ./sentinel-dashboard-1.8.2.jar > D:/sentinel/logs/sentinel.log 2>&1 &
+    data-type: json 报错无法启动，只能配置yaml，虽然也报错，但是能正常使用
 
 31、腾讯云上安装rocketMq（修改内存配置，修改小一点32M）
     启动命令：在bin文件夹下执行nohup sh mqnamesrv & 和nohup sh mqbroker -c /app/rocketMq/rocketmq-all-5.2.0-bin-release/conf/broker.conf &
@@ -150,6 +151,11 @@
     安装Linux镜像（ip:192.168.200.130 账号/密码：itcast/itcast）
     docker命令见docker.md
 
-34、虚拟机安装mysql
+34、虚拟机通过docker安装mysql
     地址：192.168.200.130:3306
     账号/密码：root/123456
+
+35、虚拟机安装Sentinel(不通过docker)
+    启动命令同云上安装一致，登录地址:192.168.200.130:9001
+    账号密码均为：sentinel
+    修改配置文件为虚拟机上的地址（数据库和Sentinel）
