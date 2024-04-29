@@ -238,3 +238,45 @@ FLUSH PRIVILEGES;
 exit
 ```
 
+## 2、docker安装rocketMq
+### 2.1 拉取rocketMq镜像
+```
+docker pull rocketmqinc/rocketmq
+```
+
+### 2.2 创建nameserver数据存储目录
+```
+mkdir -p /data/namesrv/logs /data/namesrv/store
+```
+
+### 2.3 构建namesrv容器并启动
+```
+docker run -d  --restart=always --name rmqnamesrv -p 9876:9876  -v  /data/namesrv/logs:/root/logs  -v /data/namesrv/store:/root/store  -e "MAX_POSSIBLE_HEAP=100000000"  rocketmqinc/rocketmq sh mqnamesrv
+```
+
+### 2.4 创建broker数据存储路径
+```
+mkdir -p /data/broker/logs  /data/broker/store /data/broker/conf
+```
+
+### 2.5 创建broker配置文件
+```
+cd /data/broker/conf
+vi broker.conf
+```
+
+### 2.6 构建broker容器并启动
+```
+docker run -d --restart=always --name rmqbroker01  --link rmqnamesrv:namesrv -p 10911:10911 -p 10909:10909  -v /data/broker/logs:/root/logs -v /data/broker/store:/root/store  -v  /data/broker/conf/broker.conf:/opt/rocketmq-4.4.0/conf/broker.conf  -e "NAMESRV_ADDR=namesrv:9876"  -e "MAX_POSSIBLE_HEAP=200000000"  rocketmqinc/rocketmq sh mqbroker -c /opt/rocketmq-4.4.0/conf/broker.conf 
+```
+
+## 3、安装rocketmq-console可视化界面
+### 3.1 拉取rocketmq-console镜像
+```
+docker pull pangliang/rocketmq-console-ng
+```
+
+### 3.2 构建rocketmq-console容器并启动
+```
+docker run -d --restart=always --name rmqadmin -e "JAVA_OPTS=-Drocketmq.namesrv.addr=124.71.8.46:9876 -Dcom.rocketmqsendMessageWithVIPChannel=false"  -p 9999:8080  pangliang/rocketmq-console-ng
+```
