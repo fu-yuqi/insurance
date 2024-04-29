@@ -278,5 +278,5 @@ docker pull pangliang/rocketmq-console-ng
 
 ### 3.2 构建rocketmq-console容器并启动
 ```
-docker run -d --restart=always --name rmqadmin -e "JAVA_OPTS=-Drocketmq.namesrv.addr=124.71.8.46:9876 -Dcom.rocketmqsendMessageWithVIPChannel=false"  -p 9999:8080  pangliang/rocketmq-console-ng
+docker run -d --restart=always --name rmqadmin -e "JAVA_OPTS=-Drocketmq.namesrv.addr=192.168.200.130:9876 -Dcom.rocketmqsendMessageWithVIPChannel=false"  -p 9999:8080  pangliang/rocketmq-console-ng
 ```

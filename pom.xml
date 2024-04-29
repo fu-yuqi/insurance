@@ -38,6 +38,7 @@
         <commons-pool2.version>2.11.1</commons-pool2.version>
         <javax.version>4.0.1</javax.version>
         <alibaba.version>2021.0.4.0</alibaba.version>
+        <rocketmq.version>2.2.2</rocketmq.version>
     </properties>
 
     <dependencyManagement>
@@ -54,6 +55,14 @@
                 <scope>test</scope>
                 <version>${spring-boot.version}</version>
             </dependency>
+
+            <!-- 引入rocketMq依赖 -->
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-spring-boot-starter</artifactId>
+                <version>${rocketmq.version}</version>
+            </dependency>
+
 
             <!-- Spring Cloud Alibaba 家族 -->
             <dependency>

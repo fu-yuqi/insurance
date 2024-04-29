@@ -26,6 +26,12 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- 引入rocketMq依赖 -->
+        <dependency>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-spring-boot-starter</artifactId>
+        </dependency>
+
         <!-- sentinel实现降级和熔断功能 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
