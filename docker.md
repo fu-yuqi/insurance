@@ -280,3 +280,28 @@ docker pull pangliang/rocketmq-console-ng
 ```
 docker run -d --restart=always --name rmqadmin -e "JAVA_OPTS=-Drocketmq.namesrv.addr=192.168.200.130:9876 -Dcom.rocketmqsendMessageWithVIPChannel=false"  -p 9999:8080  pangliang/rocketmq-console-ng
 ```
+
+## 4、安装elasticsearch:
+### 4.1 拉取镜像
+```
+docker pull elasticsearch:7.4.0
+```
+
+### 4.2 创建容器
+```
+docker run -id --name elasticsearch -d --restart=always -p 9200:9200 -p 9300:9300 -v /usr/share/elasticsearch/plugins:/usr/share/elasticsearch/plugins -e "discovery.type=single-node" elasticsearch:7.4.0
+```
+
+### 4.3 配置中文分词器
+```
+#切换目录
+cd /usr/share/elasticsearch/plugins
+#新建目录
+mkdir analysis-ik
+cd analysis-ik
+#root根目录中拷贝文件
+mv elasticsearch-analysis-ik-7.4.0.zip /usr/share/elasticsearch/plugins/analysis-ik
+#解压文件
+cd /usr/share/elasticsearch/plugins/analysis-ik
+unzip elasticsearch-analysis-ik-7.4.0.zip
+```

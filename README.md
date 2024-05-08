@@ -164,3 +164,52 @@
 
 ### 36、集成rocketMq
     因项目无法启动，虚拟机扩容：参考https://blog.csdn.net/weixin_44798288/article/details/111991383?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522171438236116800197012659%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=171438236116800197012659&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-2-111991383-null-null.142^v100^pc_search_result_base6&utm_term=VMware%E6%89%A9%E5%B1%95%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%86%85%E5%AD%98%E5%90%8E%E5%AF%B9%E7%8E%B0%E6%9C%89%E5%88%86%E5%8C%BA%E8%BF%9B%E8%A1%8C%E5%86%85%E5%AD%98%E4%BF%AE%E6%94%B9&spm=1018.2226.3001.4187
+
+### 37、虚拟机安装elasticsearch
+
+### 38、elasticsearch创建索引和映射
+```
+put请求 ： http://192.168.200.130:9200/app_info_article
+GET请求查询映射：http://192.168.200.130:9200/app_info_article
+DELETE请求，删除索引及映射：http://192.168.200.130:9200/app_info_article
+GET请求，查询所有文档：http://192.168.200.130:9200/app_info_article/_search
+```
+```json
+{
+    "mappings":{
+        "properties":{
+            "id":{
+                "type":"long"
+            },
+            "publishTime":{
+                "type":"date"
+            },
+            "layout":{
+                "type":"integer"
+            },
+            "images":{
+                "type":"keyword",
+                "index": false
+            },
+            "staticUrl":{
+                "type":"keyword",
+                "index": false
+            },
+            "authorId": {
+                "type": "long"
+            },
+            "authorName": {
+                "type": "text"
+            },
+            "title":{
+                "type":"text",
+                "analyzer":"ik_smart"
+            },
+            "content":{
+                "type":"text",
+                "analyzer":"ik_smart"
+            }
+        }
+    }
+}
+```
