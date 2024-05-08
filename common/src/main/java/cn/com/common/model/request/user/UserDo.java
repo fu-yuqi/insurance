@@ -42,6 +42,12 @@ public class UserDo {
      */
     private String percustomerId;
 
+
+    /**
+     * 角色id
+     */
+    private String roleId;
+
     /**
      * 锁定标记0未锁定1锁定
      */
@@ -106,6 +112,8 @@ public class UserDo {
 
     private String province;
 
+    @NotNull(message = "用户所在地不能为空")
+    @NotEmpty(message = "用户所在地不能为空")
     private String city;
 
     /**
@@ -117,5 +125,7 @@ public class UserDo {
      * 用户注册时的来源 01:pc端 02:移动端 03:管理员 04:渠道用户 05:大型员福hr 06:员工
      */
     private String registerSource;
+
+    private String SecurityCode;
 
 }

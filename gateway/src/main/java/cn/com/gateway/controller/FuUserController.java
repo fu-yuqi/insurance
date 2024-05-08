@@ -8,10 +8,7 @@ import cn.com.gateway.service.impl.FuUserServiceImpl;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -30,9 +27,9 @@ public class FuUserController {
     @Autowired
     private FuUserServiceImpl fuUserService;
 
-    @RequestMapping(value = "/insertUser", method = RequestMethod.POST)
+    @RequestMapping(value = "/insertUserInfo", method = RequestMethod.POST)
     @ApiOperation(value = "新增用户", httpMethod = "POST", notes = "新增用户")
-    public ResponseResult<String> insertUser(@RequestBody @Valid UserDo userDo) {
+    public ResponseResult<String> insertUser(@RequestParam(value = "用户信息", required = true) @RequestBody @Valid UserDo userDo) {
         String result = fuUserService.insertUser(userDo);
         return ResponseResult.success(result);
     }
