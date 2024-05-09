@@ -60,13 +60,13 @@
     <build>
         <finalName>${project.artifactId}</finalName>
         <defaultGoal>compile</defaultGoal>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.6.15</version>
-            </plugin>
-        </plugins>
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--                <version>2.6.15</version>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
     </build>
     <repositories>
         <repository>
