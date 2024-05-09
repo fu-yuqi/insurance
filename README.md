@@ -224,5 +224,8 @@ GET请求，查询所有文档：http://192.168.200.130:9200/app_info_article/_s
 
 ### 43、解决打包无法引入common依赖问题
 
-### 44、虚拟机jenkins配置完成，需要安装maven（未安装）
+### 44、虚拟机jenkins配置完成，需要安装maven
     jenkins登录账号/密码:itcast/itcast
+
+### 45、虚拟机更新docker 
+    1、yum -y update
