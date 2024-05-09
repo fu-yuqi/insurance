@@ -223,3 +223,6 @@ GET请求，查询所有文档：http://192.168.200.130:9200/app_info_article/_s
 ### 42、安装新的镜像，配置jenkins（参考另一个仓库）
 
 ### 43、解决打包无法引入common依赖问题
+
+### 44、虚拟机jenkins配置完成，需要安装maven（未安装）
+    jenkins登录账号/密码:itcast/itcast
