@@ -100,7 +100,7 @@ spring:
             data-id: gateway-sentinel
             group-id: SENTINEL_GROUP
             namespace: e21b104c-8e51-45ca-938e-0d64ea387baa
-            data-type: yaml
+            data-type: json
             rule-type: flow #规则:flow流控规则，degrade降级规则，authority授权规则，system系统规则, param-flow热点key规则
 
 
