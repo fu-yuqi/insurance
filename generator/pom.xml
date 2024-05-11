@@ -12,9 +12,7 @@
     <artifactId>generator</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>generator</name>
-    <properties>
-        <java.version>8</java.version>
-    </properties>
+
     <dependencies>
         <!-- Mybatis Plus Generator：代码生成器 -->
         <dependency>

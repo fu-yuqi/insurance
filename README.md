@@ -225,7 +225,26 @@ GET请求，查询所有文档：http://192.168.200.130:9200/app_info_article/_s
 ### 43、解决打包无法引入common依赖问题
 
 ### 44、虚拟机jenkins配置完成，需要安装maven
+    jenkins登录地址：http://192.168.200.100:16060/
     jenkins登录账号/密码:itcast/itcast
 
 ### 45、虚拟机更新docker 
-    1、yum -y update
+    1、更新软件包版本
+        yum -y update
+    2、卸载旧版本
+        yum -y remove docker  docker-common docker-selinux docker-engine
+    3、安装软件依赖包
+        yum install -y yum-utils device-mapper-persistent-data lvm2
+    4、设置yum源为阿里云
+        sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+    5、docker-ce安装
+        yum install -y docker-ce
+    6、安装后查看docker版本
+        docker -version
+    7、启动
+        设置开机启动：
+            systemctl enable docker
+        启动docker
+            systemctl start docker
+
+### 46、尝试下使用jdk11或jdk17(jdk11用的比较多，暂时使用jdk11)
